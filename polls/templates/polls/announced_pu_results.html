@@ -1,0 +1,27 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+<h4 style="text-align: center; margin-top: 20px;">Announced Polling Unit Results</h4>
+<hr>
+<p>Number of Party Registered - {{ announced_results_count }}</p>
+<table>
+    <thead> 
+      <tr>
+        <th>S/N</th>
+        <th>Party</th>
+        <th>Party Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for result in announced_results %} 
+       <tr>
+        <td>{{forloop.counter}}.</td>
+        <td>{{ result.party }}</td>
+        <td>{{ result.party_score }}</td>
+      {% endfor %}
+ ￼     <tr>
+        <td><b>Total - </b></td>
+         <td>{{ total_announced_results }}</td>
+      </tr>
+    </tbody>
+  </table>
+{% endblock content %}

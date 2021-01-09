@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bincom|Inec Polls</title>
+  <meta name="author" content="Damilare Samuel">
+  <meta name="keywords" content="Bincom Test, Samuel Damilare, INEC Polls">
+  <meta name="description" content="Bincom Software Developer Test">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    #message{
+      background-color: grey;
+      color: #fff;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+	<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="{% url 'index' %}">INEC Polls</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'create' %}" tabindex="-1">New Poll Unit</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'total_results' %}">Total Result</a>
+  </li>
+</ul>
+{% block content %}
+
+{% endblock content %}
+</body>
+</html>

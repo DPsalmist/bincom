@@ -1,0 +1,28 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+
+<h4 style="text-align: center; margin-top: 20px;">Bincom Software Developer Test</h4>
+<hr>
+<ul>
+	<p>Enter a poll unit ID to view details.</p>
+	<form action="{% url 'search_results' %}" method="get">
+  		<input name="q" type="text" placeholder="Search Poll Unit Here">
+  		<input type="submit" class="btn btn-info" value="Search" name="">
+	</form>
+	<hr>
+
+	<b>Task:</b>
+	<li>Create a page to display  result of individual poll unit</li>
+	<li>Create a page to display the summed total result of all polling unit under any local government area</li>
+	<li>Create a page to store new poll unit</li>
+	<br>
+	<b>Solution</b>
+	<li>Search for poll unit to get details of the poll unit.</li>
+	<li>
+		Click <a href="{% url 'total_results' %}">Total Result</a> to get sum of all parties' results.
+	</li>
+	<li>Click <a href="{% url 'create' %}">Create</a> to store a new polling unit.</li>
+</ul>
+
+
+{% endblock content %}

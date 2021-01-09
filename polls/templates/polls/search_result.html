@@ -1,0 +1,18 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+<h4 style="text-align: center; margin-top: 20px;">Individual Poll Unit Result</h4>
+<hr>
+<p><b>Search Result for Poll Unit</b></p>
+
+<ul>
+{% if pu %}
+  {% for pu in object_list %}
+    <li>
+      {{ pu }}
+    </li>
+  {% endfor %}
+{% else %}
+   <p>Oops! No record found. Search again</p>
+{% endif %} 
+</ul>
+{% endblock content %}
