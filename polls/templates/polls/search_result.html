@@ -5,10 +5,10 @@
 <p><b>Search Result for Poll Unit</b></p>
 
 <ul>
-{% if pu %}
-  {% for pu in object_list %}
+{% if object_list %}
+  {% for result in object_list %}
     <li>
-      {{ pu }}
+      {{ result }}
     </li>
   {% endfor %}
 {% else %}
