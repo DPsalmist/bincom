@@ -5,14 +5,14 @@
 <p><b>Search Result for Poll Unit</b></p>
 
 <ul>
-<!-- {% if object_list %} -->
+{% if object_list %}
   {% for result in object_list %}
     <li>
       {{ result }}
     </li>
   {% endfor %}
-<!-- {% else %} -->
-<!--    <p>Oops! No record found. Search again</p> -->
-<!-- {% endif %}  -->
+{% else %}
+   <p>Oops! No record found. Search again</p>
+{% endif %} 
 </ul>
 {% endblock content %}
